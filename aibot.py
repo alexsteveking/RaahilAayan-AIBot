@@ -6,8 +6,8 @@ import json
 
 st.title("Raahil Aayan - AI Chat")
 
-# AI Ask Function from Boardflare
-def ai_ask(prompt, data=None, temperature=0.5, max_tokens=250, model="mistral-small-latest", api_key=None, api_url="https://api.mistral.ai/v1/chat/completions"):
+# AI Ask Function using open-mistral-nemo
+def ai_ask(prompt, data=None, temperature=0.5, max_tokens=250, model="open-mistral-nemo", api_key=None, api_url="https://api.mistral.ai/v1/chat/completions"):
     if api_key is None or api_url is None:
         if "idToken" in globals():
             api_key = globals()["idToken"]
@@ -64,10 +64,6 @@ def response_generator():
 # Initialize chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
-
-# Optional: Show a dashboard image once at the top if you have one saved
-# with st.chat_message("assistant"):
-#     st.image("TheSavedImage.png", caption="CIT 144 – Demographics Data Visualization")
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
