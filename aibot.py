@@ -6,7 +6,7 @@ import json
 
 st.title("Raahil Aayan_AIBot")
 with st.chat_message("assistant"):
-    st.image("Dashboard.png", caption="CIT 144 – Demographics Data Visualization")
+    st.image("Dashboard", caption="CIT 144 – Demographics Data Visualization")
 
 # AI Ask Function using open-mistral-nemo
 def ai_ask(prompt, data=None, temperature=0.5, max_tokens=250, model="open-mistral-nemo", api_key=None, api_url="https://api.mistral.ai/v1/chat/completions"):
