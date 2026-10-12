@@ -4,7 +4,7 @@ import time
 import requests
 import json
 
-st.title("Raahil Aayan - AI Chat")
+st.title("Raahil Aayan_AIBot")
 
 # AI Ask Function using open-mistral-nemo
 def ai_ask(prompt, data=None, temperature=0.5, max_tokens=250, model="open-mistral-nemo", api_key=None, api_url="https://api.mistral.ai/v1/chat/completions"):
